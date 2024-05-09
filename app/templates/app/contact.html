@@ -1,0 +1,53 @@
+{% extends "app/base.html" %} 
+{% load static %}
+ {% block title%}contact{%endblock title %} 
+
+
+
+
+{% block main-content %}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <br></br>
+            <h1 class="text-center mb-4">Contact Us</h1>
+            <p>Welcome to our website! We are dedicated to providing excellent services and support to our customers.</p>
+            <ul class="list-unstyled">
+                <li><i class="fas fa-envelope"></i> Email: aniketdhaygude3@gmail.com.com</li>
+                <br>
+                <li><i class="fab fa-github"></i> GitHub: <a href="https://github.com/Aniket-2504">Link to GitHub</a></li>
+                <br>
+                <li><i class="fab fa-twitter"></i> Twitter: <a href="https://twitter.com/Aniket_d04">Link to Twitter</a></li>
+                <br>
+                <li><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/aniket-dhaygude-63bab6291">Link to LinkedIn</a></li>
+                <!-- Add more social media links as needed -->
+            </ul>
+
+            <br></br>
+            <p class="mt-4">You can also fill out the form below to send us a message:</p>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <div class="mt-5 text-center">
+                <p>Thank you for reaching out to us. We will get back to you as soon as possible!</p>
+            </div>
+            <br></br>
+        </div>
+    </div>
+</div>
+
+{% endblock main-content %}

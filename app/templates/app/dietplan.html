@@ -1,0 +1,56 @@
+{% extends "app/base.html" %} 
+{% load static %}
+{% block title%}Dietplan{%endblock title %} 
+
+
+
+
+
+{% block main-content %}
+
+<div class="container my-5">
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="list-group">
+         {% for val in time %}
+
+        <a href="#"class="list-group-item list-group-item-action" aria-current="true">{{val.time}}</a>
+
+
+        {% endfor %} 
+        <br></br>
+        <br></br>
+        <br></br>
+        <form action="/add-to-cart" class="d-inline">
+          <input type="hidden" name="diet_type" value={{prod.type}} />
+        <button type="submit" class="btn btn-danger  btn-lg text-decoration-none text-white" >Choose This Diet Plan</button>
+        </form>
+    </div>
+</div>
+<div class="col-sm-9">
+  <div class="row">
+    {% for prod in product %}
+    <div class="col text-center mb-4">
+      <a href="{% url 'diet-detail' prod.id %}" class="btn">
+        <div>
+          <img src="{{prod.product_image.url}}" width="300px" height="300px"/>
+          <div class="fw-bold">{{prod.title}}</div>
+          <div class="fw-bold text-warning-emphasis p-3 ">
+            Time- {{prod.time}}
+            <hr>
+            <small class="fw-bold ">Quantity- {{prod.quantity}}</small>
+            <small class="fw-bold ">id- {{prod.id}}</small>
+          </div>
+        </div>
+      </a>
+    </div>
+    
+    {% endfor %}
+  </div>
+</div>
+</div>
+</div>
+<div class="container">
+
+</div>
+{% endblock main-content %}

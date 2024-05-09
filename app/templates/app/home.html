@@ -1,0 +1,156 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+
+{% block banner-slider %}
+
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'app/images/banner/e1.jpg' %}" class="d-block w-100" alt="Banner images">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'app/images/banner/e2.jpg' %}" class="d-block w-100" alt="Banner images">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'app/images/banner/e3.jpg' %}" class="d-block w-100" alt="Banner images">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'app/images/banner/e4.jpg' %}" class="d-block w-100" alt="Banner images">
+      </div>
+    </div>
+  </div>
+
+{% endblock banner-slider %}
+
+
+{% comment %} <div class="row bg-primary text center p-5 text-white border-bottom shadow">
+<h1>  {% endcomment %}
+
+{% comment %} ------------!--------- {% endcomment %}
+
+{% comment %} </div> {% endcomment %}
+
+<br></br>
+<br></br>
+<br></br>
+
+{% block information %} 
+<br></br>
+
+
+
+<div class="container">
+    <div class="row bg-black text-center p-5 text-info border-bottom shadow rounded">
+     <h1> Fitme </h1>
+      <hr></hr>
+
+     <small class="fs-5 text-white"> Fitme is a non profitable fitness app who aims to fit all indians at a free of cost, So being honest you can use this app for free and track your progress that help you to stay fit and healthy </small>
+
+    </div>
+</div>
+
+
+{% endblock information %} 
+
+
+{% comment %} -----------!--------- {% endcomment %}
+
+
+{% block main-content %}    
+<br></br>
+
+<div class="container"> 
+<h1 class="text-center"> We Focus on Your  </h1>
+<br></br>
+<div class="row container ">
+
+  <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;"> 
+
+    <div class="goodnesssec butermilk firstbg">
+      <a href="{% url 'dietplan' 'MG' %}">
+        <div class="goodnessseccont text-center">
+          <img src="{% static 'app/images/product/p3.jpg' %}" class="img-responsive center-block" alt="image">
+          <p class="mlkpro p-2">Diet</p> 
+        </div> 
+      </a>
+    </div>
+  </div>
+
+    <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;"> 
+
+      <div class="goodnesssec butermilk secondbg">
+        <a href="{% url 'category' 'EX' %}">
+          <div class="goodnessseccont text-center">
+            <img src="{% static 'app/images/product/p2.jpg' %}" class="img-responsive center-block" alt="image">
+            <p class="mlkpro p-2">Excercise</p> 
+          </div> 
+        </a>
+      </div>
+    </div>
+
+      <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;"> 
+
+        <div class="goodnesssec butermilk thirdbg">
+          <a href="{% url 'category' 'YG' %}">
+            <div class="goodnessseccont text-center">
+              <img src="{% static 'app/images/product/p6.jpg' %}" class="img-responsive center-block" alt="image">
+              <p class="mlkpro p-2"> Yoga</p> 
+            </div> 
+          </a>
+        </div>
+      </div>
+
+</div>
+
+
+<br></br>
+<br></br>
+<div class="row container ">
+
+  <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;"> 
+
+    <div class="goodnesssec butermilk firstbg">
+      <a href="{% url 'category' 'MD' %}">
+        <div class="goodnessseccont text-center">
+          <img src="{% static 'app/images/product/p3.jpg' %}" class="img-responsive center-block" alt="image">
+          <p class="mlkpro p-2">Meditation</p> 
+        </div> 
+      </a>
+    </div>
+  </div>
+
+    <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;"> 
+
+      <div class="goodnesssec butermilk secondbg">
+        <a href="{% url 'category' 'HT' %}">
+          <div class="goodnessseccont text-center">
+            <img src="{% static 'app/images/product/p4.jpg' %}" class="img-responsive center-block" alt="image">
+            <p class="mlkpro p-2">Health</p> 
+          </div> 
+        </a>
+      </div>
+    </div>
+
+      <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;"> 
+
+        <div class="goodnesssec butermilk thirdbg">
+          <a href="#">
+            <div class="goodnessseccont text-center">
+              <img src="{% static 'app/images/product/p5.jpg' %}" class="img-responsive center-block" alt="image">
+              <p class="mlkpro p-2">Progress</p> 
+            </div> 
+          </a>
+        </div>
+      </div>
+
+</div>
+
+
+</div>
+<br></br>
+<br></br>
+<br></br>
+
+{% endblock main-content %}
